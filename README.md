@@ -32,10 +32,10 @@ pip install -r requirements.txt
 For a more interactive experience, we also provide Google Colab versions of the tutorials. Simply click the links below to open the notebooks in Colab:
 
 ### Colab Reduced Order Modeling Tutorials
-- 📔 [FNO_Burgers1D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/rom_tutorials/FNO_Burgers1D.ipynb)
-- 📔 [DeepONet_Burgers1D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/rom_tutorials/DeepONet_Burgers1D.ipynb)
-- 📔 [PODDLROM_Burgers1D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/rom_tutorials/PODDLROM_Burgers1D.ipynb)
-- 📔 [DL_ROM_NOAA2D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/rom_tutorials/DL_ROM_NOAA2D.ipynb)
+- 📔 [FNO_Burgers1D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/FNO_Burgers1D.ipynb)
+- 📔 [DeepONet_Burgers1D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/DeepONet_Burgers1D.ipynb)
+- 📔 [PODDLROM_Burgers1D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/PODDLROM_Burgers1D.ipynb)
+- 📔 [DL_ROM_NOAA2D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/DL_ROM_NOAA2D.ipynb)
 
 ---
 
