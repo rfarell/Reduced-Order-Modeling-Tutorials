@@ -29,6 +29,17 @@ pip install -r requirements.txt
 
 ---
 
+## Current Model Coverage
+> Li, Z., Kovachki, N., Azizzadenesheli, K., Liu, B., Bhattacharya, K., Stuart, A., & Anandkumar, A. (2020). Fourier neural operator for parametric partial differential equations. arXiv preprint arXiv:2010.08895. [Paper](https://arxiv.org/abs/2010.08895)
+
+> Lu, L., Jin, P., & Karniadakis, G. E. (2019). Deeponet: Learning nonlinear operators for identifying differential equations based on the universal approximation theorem of operators. arXiv preprint arXiv:1910.03193. [Paper](https://arxiv.org/abs/1910.03193)
+
+> Fresca, S., & Manzoni, A. (2022). POD-DL-ROM: Enhancing deep learning-based reduced order models for nonlinear parametrized PDEs by proper orthogonal decomposition. Computer Methods in Applied Mechanics and Engineering, 388, 114181. [Paper](https://www.sciencedirect.com/science/article/pii/S0045782521005120)
+
+> Pant, P., Doshi, R., Bahl, P., & Barati Farimani, A. (2021). Deep learning for reduced order modelling and efficient temporal evolution of fluid simulations. Physics of Fluids, 33(10). [Paper](https://arxiv.org/abs/2107.04556)
+
+---
+
 ## Notebook Naming Convention
 
 In order to facilitate ease of navigation and comprehension, a standard naming schema has been adopted for the Jupyter notebooks:
@@ -82,6 +93,29 @@ For inquiries or issues, kindly open an issue on GitHub or reach out via [Twitte
 ---
 
 ## To-Do List
-- [ ] Dataset Generation
-- [ ] Integrate NeuralODEs into the tutorials
-- [ ] Incorporate ODE2VAE model
+
+### Dataset Preparation
+- [ ] **Dataset Generation**: Generate synthetic or collect real-world data for tutorials.
+  - Deadline: `2023-10-25`
+  - Context: Necessary for running experiments in the tutorials.
+
+### Model Implementation
+- [ ] **Implement NeuralODE**: Incorporate Neural Ordinary Differential Equations into the set of tutorials.
+  - Deadline: `2023-10-25`
+  - Paper: [Neural Ordinary Differential Equations](https://proceedings.neurips.cc/paper_files/paper/2018/file/69386f6bb1dfed68692a24c8686939b9-Paper.pdf)
+  - Citation: Chen, R. T., Rubanova, Y., Bettencourt, J., & Duvenaud, D. K. (2018). Neural ordinary differential equations. Advances in neural information processing systems, 31. [Paper](https://proceedings.neurips.cc/paper_files/paper/2018/file/69386f6bb1dfed68692a24c8686939b9-Paper.pdf)
+  
+- [ ] **Implement ODE2VAE**: Integrate ODE2VAE model, focusing on generative second-order ODEs.
+  - Deadline: `2023-10-26`
+  - Paper: [ODE2VAE: Deep Generative Second Order ODEs with Bayesian Neural Networks](https://proceedings.neurips.cc/paper/2019/file/99a401435dcb65c4008d3ad22c8cdad0-Paper.pdf)
+  - Citation: Yildiz, C., Heinonen, M., & Lahdesmaki, H. (2019). ODE2VAE: Deep generative second order ODEs with Bayesian neural networks. Advances in Neural Information Processing Systems, 32. [Paper](https://proceedings.neurips.cc/paper/2019/file/99a401435dcb65c4008d3ad22c8cdad0-Paper.pdf)
+
+### Documentation
+- [ ] **Add Code Links to 'Current Model Coverage' Section**: Link the model names to their corresponding code files for easier navigation.
+  - Deadline: `2023-10-25`
+  - Assignee: `Name/Role`
+
+### Debugging
+- [ ] **Fix `DL-ROM_NOAA2D.ipynb`**: The model is not learning. Examine and adjust hyperparameters.
+  - Deadline: `2023-10-25`
+  - Context: Too many parameters to tune; requires careful hyperparameter optimization or model architecture changes.
