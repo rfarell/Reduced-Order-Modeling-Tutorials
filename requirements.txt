@@ -1,0 +1,14 @@
+# PyTorch for deep learning
+torch
+
+# Google Drive download utility
+gdown
+
+# Scientific computing
+scipy
+numpy
+h5py
+
+# Plotting libraries
+matplotlib
+plotly
