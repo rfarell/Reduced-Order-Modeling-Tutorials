@@ -65,6 +65,7 @@ For users interested in a more interactive learning experience, Google Colab ver
 - 📔 [DeepONet_Burgers1D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/DeepONet_Burgers1D.ipynb)
 - 📔 [POD-DL-ROM_Burgers1D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/POD-DL-ROM_Burgers1D.ipynb)
 - 📔 [DL-ROM_NOAA2D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/DL-ROM_NOAA2D.ipynb)
+- 📔 [Physics_Informed_Gaussian_Process_1D](https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/pinn_gp_1d_v1.ipynb)
 
 ---
 
