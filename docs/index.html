@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reduced Order Modeling Tutorials</title>
+  <!-- Meta tags for responsiveness and basic SEO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A curated collection of tutorials on reduced-order modeling techniques." />
+  <!-- Link to our custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Main container -->
+  <div class="container">
+    <!-- Header / Title Section -->
+    <header>
+      <h1>Reduced Order Modeling Tutorials</h1>
+      <p class="subtitle">
+        A hands-on guide to <strong>DeepONet, FNO, POD-DL-ROM, DL-ROM</strong> and more,
+        showcasing how to simplify and accelerate large-scale computational models.
+      </p>
+    </header>
+    
+    <hr />
+
+    <!-- Background and Objectives Section -->
+    <section>
+      <h2>Background and Objectives</h2>
+      <p>
+        This repository is a curated collection of tutorials that delve into various
+        reduced-order modeling techniques. Utilizing Jupyter Notebooks as the
+        instructional medium, these tutorials provide an interactive, hands-on
+        approach to understanding complex computational models like DeepONet, FNO,
+        POD-DL-ROM, and DL-ROM. Each notebook is designed to function as a standalone
+        tutorial and includes provisions for automatic data retrieval, facilitating
+        execution on both local machines and Google Colab environments.
+      </p>
+    </section>
+    
+    <hr />
+
+    <!-- Installation and Requirements Section -->
+    <section>
+      <h2>Installation and Requirements</h2>
+      <p>
+        To execute the tutorials, certain Python packages must be installed. This can
+        be done by running:
+      </p>
+      <pre><code>pip install -r requirements.txt</code></pre>
+    </section>
+
+    <hr />
+
+    <!-- Model Coverage Section -->
+    <section>
+      <h2>Current Model Coverage</h2>
+      <ul class="paper-list">
+        <li>
+          <strong>Fourier Neural Operator (FNO):</strong> 
+          <em>Li et al. (2020)</em> — 
+          <a href="https://arxiv.org/abs/2010.08895" target="_blank" rel="noopener noreferrer">
+            Paper
+          </a>
+        </li>
+        <li>
+          <strong>DeepONet:</strong> 
+          <em>Lu et al. (2019)</em> — 
+          <a href="https://arxiv.org/abs/1910.03193" target="_blank" rel="noopener noreferrer">
+            Paper
+          </a>
+        </li>
+        <li>
+          <strong>POD-DL-ROM:</strong> 
+          <em>Fresca & Manzoni (2022)</em> — 
+          <a href="https://www.sciencedirect.com/science/article/pii/S0045782521005120" target="_blank" rel="noopener noreferrer">
+            Paper
+          </a>
+        </li>
+        <li>
+          <strong>Deep Learning for Reduced Order Modeling:</strong> 
+          <em>Pant et al. (2021)</em> — 
+          <a href="https://arxiv.org/abs/2107.04556" target="_blank" rel="noopener noreferrer">
+            Paper
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <!-- Notebook Naming Convention Section -->
+    <section>
+      <h2>Notebook Naming Convention</h2>
+      <p>
+        To keep everything organized, we use a naming schema:
+      </p>
+      <pre><code>[Model]_[Equation/Problem+Dimension]_[TAG].ipynb</code></pre>
+      <ul>
+        <li><strong>Model:</strong> The algorithm or approach (e.g., FNO, DLROM).</li>
+        <li><strong>Equation/Problem+Dimension:</strong> The PDE or physical model, plus the dimension (e.g., Burgers1D).</li>
+        <li><strong>TAG:</strong> An optional label indicating tutorial focus or difficulty (e.g., Intro, DataPrep).</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <!-- Interactive Colab Notebooks -->
+    <section>
+      <h2>Interactive Colab Notebooks</h2>
+      <p>
+        Below are direct links to Colab notebooks for a more interactive experience:
+      </p>
+      <ul class="notebook-links">
+        <li>
+          <a href="https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/FNO_Burgers1D.ipynb" 
+             target="_blank" rel="noopener noreferrer">
+            📔 FNO_Burgers1D
+          </a>
+        </li>
+        <li>
+          <a href="https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/DeepONet_Burgers1D.ipynb" 
+             target="_blank" rel="noopener noreferrer">
+            📔 DeepONet_Burgers1D
+          </a>
+        </li>
+        <li>
+          <a href="https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/POD-DL-ROM_Burgers1D.ipynb" 
+             target="_blank" rel="noopener noreferrer">
+            📔 POD-DL-ROM_Burgers1D
+          </a>
+        </li>
+      </ul>
+      <p>
+        Each notebook automatically fetches relevant datasets at runtime, allowing you
+        to explore these models without additional setup.
+      </p>
+    </section>
+
+    <hr />
+
+    <!-- License Section -->
+    <section>
+      <h2>License</h2>
+      <p>
+        This repository is under the MIT License. For more information, see the 
+        <a href="../LICENSE" target="_blank" rel="noopener noreferrer">
+          LICENSE file
+        </a>.
+      </p>
+    </section>
+
+    <hr />
+
+    <!-- Footer / GitHub Link -->
+    <footer>
+      <p>
+        <strong>Project Repo:</strong> 
+        <a href="https://github.com/rfarell/Reduced-Order-Modeling-Tutorials" target="_blank" rel="noopener noreferrer">
+          github.com/rfarell/Reduced-Order-Modeling-Tutorials
+        </a>
+      </p>
+      <!-- Optionally place your name, contact info, or your main site link here -->
+      <p class="footer-credits">
+        Made with ❤️ by <a href="https://rfarell.github.io" target="_blank" rel="noopener noreferrer">Ryan Farell</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
