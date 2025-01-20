@@ -26,137 +26,86 @@
     <meta charset="UTF-8" />
     <title>Research Timeline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Research Timeline Application" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
   </head>
   <body class="antialiased">
     <div id="root"></div>
     <!-- The Vite dev/bundle scripts will be injected here -->
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>
 
-
 ===== ./styles.css =====
-/* docs/styles.css */
+/* Optional global styles to complement Tailwind. */
 
 /* Basic Reset and Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    background: #fafafa;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  /* Container and Layout */
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    background-color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    border-radius: 5px;
-  }
-  
-  /* Headings and Sections */
-  header h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #2c3e50;
-  }
-  
-  .subtitle {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 1rem;
-  }
-  
-  h2 {
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #444;
-  }
-  
-  section {
-    margin-bottom: 1rem;
-  }
-  
-  /* Horizontal Rule (section divider) */
-  hr {
-    margin: 2rem 0;
-    border: none;
-    height: 1px;
-    background: #ddd;
-  }
-  
-  /* Lists */
-  ul {
-    margin: 0.75rem 0;
-    padding-left: 1.5rem;
-    list-style-type: disc;
-  }
-  ul.paper-list {
-    list-style-type: square;
-  }
-  ul.notebook-links {
-    list-style: none;
-    padding-left: 0;
-  }
-  ul.notebook-links li {
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Preformatted Code Blocks */
-  pre {
-    background: #f4f4f4;
-    padding: 0.75rem;
-    border-radius: 4px;
-    margin: 0.75rem 0;
-    overflow-x: auto;
-  }
-  code {
-    font-family: "Courier New", Courier, monospace;
-  }
-  
-  /* Footer */
-  footer {
-    margin-top: 2rem;
-    text-align: center;
-    padding-top: 1rem;
-    border-top: 1px solid #eee;
-    font-size: 0.9rem;
-    color: #777;
-  }
-  .footer-credits a {
-    color: #3498db;
-    text-decoration: none;
-  }
-  .footer-credits a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Links */
-  a {
-    color: #3498db;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Example container layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+/* Headings */
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+/* Horizontal Rule (section divider) */
+hr {
+  margin: 2rem 0;
+  border: none;
+  height: 1px;
+  background: #ddd;
+}
+
+/* Simple link styling */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 
 ===== ./postcss.config.cjs =====
 module.exports = {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {}
-    }
-  };
-  
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {}
+  }
+};
+
 
 ===== ./README.md =====
 
@@ -164,16 +113,16 @@ module.exports = {
 ===== ./tailwind.config.cjs =====
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-      './index.html',
-      './src/**/*.{ts,tsx,js,jsx}'
-    ],
-    theme: {
-      extend: {}
-    },
-    plugins: []
-  };
-  
+  content: [
+    './index.html',
+    './src/**/*.{ts,tsx,js,jsx}'
+  ],
+  theme: {
+    extend: {}
+  },
+  plugins: []
+};
+
 
 ===== ./package.json =====
 {
@@ -181,26 +130,27 @@ module.exports = {
     "version": "1.0.0",
     "description": "A minimal React + Tailwind CSS project configured for GitHub Pages.",
     "scripts": {
-      "dev": "vite",
-      "build": "vite build",
-      "serve": "vite preview"
+        "dev": "vite",
+        "build": "vite build",
+        "serve": "vite preview"
     },
     "dependencies": {
-      "react": "^18.2.0",
-      "react-dom": "^18.2.0"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
-      "@heroicons/react": "^2.0.13",
-      "@types/react": "^18.0.28",
-      "@types/react-dom": "^18.0.11",
-      "autoprefixer": "^10.4.14",
-      "postcss": "^8.4.21",
-      "typescript": "^4.9.5",
-      "tailwindcss": "^3.2.7",
-      "vite": "^4.0.4"
+        "@heroicons/react": "^2.0.13",
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
+        "@vitejs/plugin-react": "^4.3.4",
+        "autoprefixer": "^10.4.14",
+        "postcss": "^8.4.21",
+        "tailwindcss": "^3.2.7",
+        "typescript": "^4.9.5",
+        "vite": "^4.0.4"
     }
-  }
-  
+}
+
 
 ===== ./tsconfig.json =====
 {
@@ -232,21 +182,21 @@ module.exports = {
   }
 
 ===== ./vite.config.ts =====
+// app/vite.config.ts
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
 
-  // IMPORTANT: Output the final site into the `docs` folder
   build: {
-    outDir: 'docs'
+    // Output the build files to the top-level `docs/` folder
+    outDir: '../docs'
   },
 
-  // If you are deploying to a custom "username.github.io/repository" path,
-  // you might also need to set the base: '/repository/' here.
-  // Example:
-  // base: '/my-react-tailwind-app/',
+  // If you plan to serve from a sub-path like username.github.io/my-repo,
+  // set the base property accordingly, e.g.:
+  // base: '/my-repo/',
 });
 
 
@@ -264,8 +214,14 @@ export default App;
 ===== ./src/main.tsx =====
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+// Tailwind base + utilities
+import './index.css';
+
+// Optional extra user-defined CSS (styles.css in the project root)
+import '../styles.css';
+
 import App from './App';
-import './index.css';  // We'll create this to import Tailwind styles
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -279,15 +235,15 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 @tailwind components;
 @tailwind utilities;
 
-/* You can add global overrides here if needed. */
+/* You can add global overrides or layer directives here if needed. */
 
 
 ===== ./src/components/ResearchTimelineApp.tsx =====
 import React, { useState } from 'react';
-import { 
-  DocumentTextIcon, 
-  BeakerIcon, 
-  ChartBarIcon 
+import {
+  DocumentTextIcon,
+  BeakerIcon,
+  ChartBarIcon
 } from '@heroicons/react/24/outline';
 
 interface TimelineItem {
@@ -295,61 +251,187 @@ interface TimelineItem {
   title: string;
   description: string;
   color: string;
+  link: string;
 }
 
 const ResearchTimelineApp: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<string>('overview');
+  // We'll have three main sections in the sidebar:
+  //   1) coverage  -> "Current Model Coverage"
+  //   2) naming    -> "Notebook Naming Convention"
+  //   3) colab     -> "Interactive Colab Notebooks"
+  const [activeSection, setActiveSection] = useState<string>('coverage');
 
+  // Updated references in the timeline
+  // You can click each timeline milestone if you want to implement that.
+  // Right now they are static items displayed on the left panel.
   const timelineData: TimelineItem[] = [
     {
       year: 2020,
-      title: 'Charles et al.',
-      description: 'Initial research findings',
-      color: 'bg-blue-100'
+      title: 'Li et al. (2020)',
+      description: 'Fourier Neural Operator for parametric PDEs',
+      color: 'bg-blue-100',
+      link: 'https://arxiv.org/abs/2010.08895'
+    },
+    {
+      year: 2019,
+      title: 'Lu et al. (2019)',
+      description: 'DeepONet: Learning nonlinear operators for PDEs',
+      color: 'bg-green-100',
+      link: 'https://arxiv.org/abs/1910.03193'
+    },
+    {
+      year: 2022,
+      title: 'Fresca & Manzoni (2022)',
+      description: 'POD-DL-ROM for nonlinear PDEs',
+      color: 'bg-purple-100',
+      link: 'https://www.sciencedirect.com/science/article/pii/S0045782521005120'
     },
     {
       year: 2021,
-      title: 'Demna',
-      description: 'Expanded research scope',
-      color: 'bg-green-100'
-    },
-    {
-      year: 2021,
-      title: 'Dask',
-      description: 'Methodological innovations',
-      color: 'bg-purple-100'
-    },
-    {
-      year: 2023,
-      title: 'Bedford et al.',
-      description: 'Comprehensive results',
-      color: 'bg-red-100'
+      title: 'Pant et al. (2021)',
+      description: 'Deep learning for reduced-order fluid sims',
+      color: 'bg-red-100',
+      link: 'https://arxiv.org/abs/2107.04556'
     }
   ];
 
+  // Renders main content for whichever section is active.
   const renderContent = () => {
     switch (activeSection) {
-      case 'overview':
+      case 'coverage':
+        // Display the "Current Model Coverage" from your README
         return (
           <div className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Research Overview</h2>
-            <p>A comprehensive research project exploring multiple scientific domains.</p>
+            <h2 className="text-2xl font-bold mb-4">Current Model Coverage</h2>
+            <div className="space-y-4 text-sm">
+              <p>
+                <strong>Li, Z., Kovachki, N., Azizzadenesheli, K., Liu, B., Bhattacharya, K., 
+                Stuart, A., &amp; Anandkumar, A. (2020).</strong> Fourier neural operator 
+                for parametric partial differential equations. <em>arXiv preprint</em> 
+                <a 
+                  href="https://arxiv.org/abs/2010.08895"
+                  className="text-blue-600 hover:underline ml-1"
+                >
+                  arXiv:2010.08895
+                </a>
+              </p>
+              <p>
+                <strong>Lu, L., Jin, P., &amp; Karniadakis, G. E. (2019).</strong> Deeponet: 
+                Learning nonlinear operators for identifying differential equations 
+                based on the universal approximation theorem of operators. 
+                <em>arXiv preprint</em> 
+                <a
+                  href="https://arxiv.org/abs/1910.03193"
+                  className="text-blue-600 hover:underline ml-1"
+                >
+                  arXiv:1910.03193
+                </a>
+              </p>
+              <p>
+                <strong>Fresca, S., &amp; Manzoni, A. (2022).</strong> POD-DL-ROM: Enhancing 
+                deep learning-based reduced order models for nonlinear parametrized PDEs 
+                by proper orthogonal decomposition. <em>Computer Methods in Applied 
+                Mechanics and Engineering, 388, 114181.</em> 
+                <a
+                  href="https://www.sciencedirect.com/science/article/pii/S0045782521005120"
+                  className="text-blue-600 hover:underline ml-1"
+                >
+                  Paper
+                </a>
+              </p>
+              <p>
+                <strong>Pant, P., Doshi, R., Bahl, P., &amp; Barati Farimani, A. (2021).</strong> 
+                Deep learning for reduced order modelling and efficient temporal evolution 
+                of fluid simulations. <em>Physics of Fluids, 33(10).</em> 
+                <a
+                  href="https://arxiv.org/abs/2107.04556"
+                  className="text-blue-600 hover:underline ml-1"
+                >
+                  Paper
+                </a>
+              </p>
+            </div>
           </div>
         );
-      case 'methodology':
+
+      case 'naming':
+        // Display the "Notebook Naming Convention" section
         return (
           <div className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Research Methodology</h2>
-            <p>Detailed explanation of the research approach and techniques used.</p>
+            <h2 className="text-2xl font-bold mb-4">Notebook Naming Convention</h2>
+            <p>
+              In order to facilitate ease of navigation and comprehension, a standard 
+              naming schema has been adopted for the Jupyter notebooks:
+            </p>
+            <pre className="bg-gray-100 p-4 my-4 text-sm rounded">
+{`[Model]_[Equation/Problem+Dimension]_[TAG].ipynb`}
+            </pre>
+            <ul className="list-disc pl-6 space-y-2 text-sm">
+              <li>
+                <strong>Model:</strong> Represents the computational model or algorithm 
+                under study (e.g., FNO, DLROM).
+              </li>
+              <li>
+                <strong>Equation/Problem+Dimension:</strong> Specifies the mathematical 
+                problem or equation being solved along with its spatial dimensions 
+                (e.g., Burgers1D, NOAA2D).
+              </li>
+              <li>
+                <strong>TAG:</strong> An optional identifier providing supplementary 
+                context or categorizing the notebook’s difficulty level or specific 
+                focus (e.g., Intro, Advanced, DataPrep).
+              </li>
+            </ul>
           </div>
         );
-      case 'results':
+
+      case 'colab':
+        // Display the "Interactive Colab Notebooks" section
         return (
           <div className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Research Results</h2>
-            <p>Comprehensive analysis and key findings of the research project.</p>
+            <h2 className="text-2xl font-bold mb-4">Interactive Colab Notebooks</h2>
+            <p className="mb-4">
+              For users interested in a more interactive learning experience, Google 
+              Colab versions of these tutorials are available:
+            </p>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <span role="img" aria-label="Notebook">📔</span>{' '}
+                <a
+                  href="https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/FNO_Burgers1D.ipynb"
+                  className="text-blue-600 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  FNO_Burgers1D
+                </a>
+              </li>
+              <li>
+                <span role="img" aria-label="Notebook">📔</span>{' '}
+                <a
+                  href="https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/DeepONet_Burgers1D.ipynb"
+                  className="text-blue-600 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  DeepONet_Burgers1D
+                </a>
+              </li>
+              <li>
+                <span role="img" aria-label="Notebook">📔</span>{' '}
+                <a
+                  href="https://colab.research.google.com/github/rfarell/Reduced-Order-Modeling-Tutorials/blob/main/notebooks/POD-DL-ROM_Burgers1D.ipynb"
+                  className="text-blue-600 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  POD-DL-ROM_Burgers1D
+                </a>
+              </li>
+            </ul>
           </div>
         );
+
       default:
         return null;
     }
@@ -360,15 +442,15 @@ const ResearchTimelineApp: React.FC = () => {
       {/* Sidebar with Timeline */}
       <div className="w-80 bg-white shadow-md overflow-y-auto">
         <div className="p-6 border-b">
-          <h1 className="text-xl font-bold">Research Timeline</h1>
+          <h1 className="text-xl font-bold">Reduced-Order Modeling</h1>
         </div>
         
         {/* Navigation Menu */}
         <nav className="p-4 border-b">
           {[
-            { name: 'overview', icon: DocumentTextIcon },
-            { name: 'methodology', icon: BeakerIcon },
-            { name: 'results', icon: ChartBarIcon }
+            { name: 'coverage', label: 'Current Model Coverage', icon: DocumentTextIcon },
+            { name: 'naming',   label: 'Notebook Naming Convention', icon: BeakerIcon },
+            { name: 'colab',    label: 'Colab Notebooks', icon: ChartBarIcon }
           ].map((item) => (
             <button
               key={item.name}
@@ -380,25 +462,37 @@ const ResearchTimelineApp: React.FC = () => {
               }`}
             >
               <item.icon className="w-6 h-6 mr-3" />
-              {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
+              {item.label}
             </button>
           ))}
         </nav>
 
         {/* Timeline Section */}
         <div className="p-4">
-          <h2 className="text-lg font-semibold mb-4">Research Milestones</h2>
+          <h2 className="text-lg font-semibold mb-4">Timeline of Papers</h2>
           <div className="relative border-l-4 border-gray-300 pl-4">
             {timelineData.map((item, index) => (
               <div key={index} className="mb-6 relative">
+                {/* Year bubble */}
                 <div
                   className={`absolute -left-[26px] w-12 h-12 rounded-full flex items-center justify-center ${item.color}`}
                 >
                   <span className="font-bold">{item.year}</span>
                 </div>
+                {/* Paper info */}
                 <div className="ml-16 bg-white p-4 rounded-lg shadow-sm border">
-                  <h3 className="font-semibold text-sm">{item.title}</h3>
+                  <h3 className="font-semibold text-sm mb-1">
+                    {item.title}
+                  </h3>
                   <p className="text-xs text-gray-600">{item.description}</p>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-2 text-blue-600 text-xs underline"
+                  >
+                    View Paper
+                  </a>
                 </div>
               </div>
             ))}

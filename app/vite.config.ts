@@ -5,12 +5,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
 
+  // "base" must match your GitHub repo name
+  base: '/Reduced-Order-Modeling-Tutorials/',
+
   build: {
     // Output the build files to the top-level `docs/` folder
     outDir: '../docs'
-  },
-
-  // If you plan to serve from a sub-path like username.github.io/my-repo,
-  // set the base property accordingly, e.g.:
-  // base: '/my-repo/',
+  }
 });
