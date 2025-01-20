@@ -1,0 +1,59 @@
+/* Optional global styles to complement Tailwind. */
+
+/* Basic Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Example container layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 5px;
+}
+
+/* Headings */
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+/* Horizontal Rule (section divider) */
+hr {
+  margin: 2rem 0;
+  border: none;
+  height: 1px;
+  background: #ddd;
+}
+
+/* Simple link styling */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

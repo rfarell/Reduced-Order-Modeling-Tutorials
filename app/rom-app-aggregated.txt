@@ -1,0 +1,419 @@
+===== Tree of the project =====
+.
+├── README.md
+├── index.html
+├── package.json
+├── postcss.config.cjs
+├── src
+│   ├── App.tsx
+│   ├── components
+│   │   └── ResearchTimelineApp.tsx
+│   ├── index.css
+│   └── main.tsx
+├── styles.css
+├── tailwind.config.cjs
+├── tsconfig.json
+└── vite.config.ts
+
+3 directories, 12 files
+
+
+===== Concatenated Files =====
+===== ./index.html =====
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Research Timeline</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="antialiased">
+    <div id="root"></div>
+    <!-- The Vite dev/bundle scripts will be injected here -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
+
+===== ./styles.css =====
+/* docs/styles.css */
+
+/* Basic Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #fafafa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Container and Layout */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 5px;
+  }
+  
+  /* Headings and Sections */
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+  
+  section {
+    margin-bottom: 1rem;
+  }
+  
+  /* Horizontal Rule (section divider) */
+  hr {
+    margin: 2rem 0;
+    border: none;
+    height: 1px;
+    background: #ddd;
+  }
+  
+  /* Lists */
+  ul {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+  }
+  ul.paper-list {
+    list-style-type: square;
+  }
+  ul.notebook-links {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul.notebook-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Preformatted Code Blocks */
+  pre {
+    background: #f4f4f4;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin: 0.75rem 0;
+    overflow-x: auto;
+  }
+  code {
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  .footer-credits a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  .footer-credits a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Links */
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+
+===== ./postcss.config.cjs =====
+module.exports = {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
+    }
+  };
+  
+
+===== ./README.md =====
+
+
+===== ./tailwind.config.cjs =====
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+      './index.html',
+      './src/**/*.{ts,tsx,js,jsx}'
+    ],
+    theme: {
+      extend: {}
+    },
+    plugins: []
+  };
+  
+
+===== ./package.json =====
+{
+    "name": "my-react-tailwind-app",
+    "version": "1.0.0",
+    "description": "A minimal React + Tailwind CSS project configured for GitHub Pages.",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+      "@heroicons/react": "^2.0.13",
+      "@types/react": "^18.0.28",
+      "@types/react-dom": "^18.0.11",
+      "autoprefixer": "^10.4.14",
+      "postcss": "^8.4.21",
+      "typescript": "^4.9.5",
+      "tailwindcss": "^3.2.7",
+      "vite": "^4.0.4"
+    }
+  }
+  
+
+===== ./tsconfig.json =====
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "lib": ["DOM", "DOM.Iterable", "ESNext"],
+      "allowJs": false,
+      "skipLibCheck": true,
+      "strict": true,
+      "module": "ESNext",
+      "moduleResolution": "Node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "jsx": "react-jsx",
+      "noEmit": true,
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["./src/*"]
+      }
+    },
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+  }
+
+===== ./vite.config.ts =====
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+
+  // IMPORTANT: Output the final site into the `docs` folder
+  build: {
+    outDir: 'docs'
+  },
+
+  // If you are deploying to a custom "username.github.io/repository" path,
+  // you might also need to set the base: '/repository/' here.
+  // Example:
+  // base: '/my-react-tailwind-app/',
+});
+
+
+===== ./src/App.tsx =====
+import React from 'react';
+import ResearchTimelineApp from './components/ResearchTimelineApp';
+
+const App: React.FC = () => {
+  return <ResearchTimelineApp />;
+};
+
+export default App;
+
+
+===== ./src/main.tsx =====
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';  // We'll create this to import Tailwind styles
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+
+===== ./src/index.css =====
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global overrides here if needed. */
+
+
+===== ./src/components/ResearchTimelineApp.tsx =====
+import React, { useState } from 'react';
+import { 
+  DocumentTextIcon, 
+  BeakerIcon, 
+  ChartBarIcon 
+} from '@heroicons/react/24/outline';
+
+interface TimelineItem {
+  year: number;
+  title: string;
+  description: string;
+  color: string;
+}
+
+const ResearchTimelineApp: React.FC = () => {
+  const [activeSection, setActiveSection] = useState<string>('overview');
+
+  const timelineData: TimelineItem[] = [
+    {
+      year: 2020,
+      title: 'Charles et al.',
+      description: 'Initial research findings',
+      color: 'bg-blue-100'
+    },
+    {
+      year: 2021,
+      title: 'Demna',
+      description: 'Expanded research scope',
+      color: 'bg-green-100'
+    },
+    {
+      year: 2021,
+      title: 'Dask',
+      description: 'Methodological innovations',
+      color: 'bg-purple-100'
+    },
+    {
+      year: 2023,
+      title: 'Bedford et al.',
+      description: 'Comprehensive results',
+      color: 'bg-red-100'
+    }
+  ];
+
+  const renderContent = () => {
+    switch (activeSection) {
+      case 'overview':
+        return (
+          <div className="p-6">
+            <h2 className="text-2xl font-bold mb-4">Research Overview</h2>
+            <p>A comprehensive research project exploring multiple scientific domains.</p>
+          </div>
+        );
+      case 'methodology':
+        return (
+          <div className="p-6">
+            <h2 className="text-2xl font-bold mb-4">Research Methodology</h2>
+            <p>Detailed explanation of the research approach and techniques used.</p>
+          </div>
+        );
+      case 'results':
+        return (
+          <div className="p-6">
+            <h2 className="text-2xl font-bold mb-4">Research Results</h2>
+            <p>Comprehensive analysis and key findings of the research project.</p>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div className="flex h-screen bg-gray-100">
+      {/* Sidebar with Timeline */}
+      <div className="w-80 bg-white shadow-md overflow-y-auto">
+        <div className="p-6 border-b">
+          <h1 className="text-xl font-bold">Research Timeline</h1>
+        </div>
+        
+        {/* Navigation Menu */}
+        <nav className="p-4 border-b">
+          {[
+            { name: 'overview', icon: DocumentTextIcon },
+            { name: 'methodology', icon: BeakerIcon },
+            { name: 'results', icon: ChartBarIcon }
+          ].map((item) => (
+            <button
+              key={item.name}
+              onClick={() => setActiveSection(item.name)}
+              className={`flex items-center w-full p-3 mb-2 rounded-lg text-left ${
+                activeSection === item.name
+                  ? 'bg-blue-100 text-blue-700'
+                  : 'hover:bg-gray-100'
+              }`}
+            >
+              <item.icon className="w-6 h-6 mr-3" />
+              {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
+            </button>
+          ))}
+        </nav>
+
+        {/* Timeline Section */}
+        <div className="p-4">
+          <h2 className="text-lg font-semibold mb-4">Research Milestones</h2>
+          <div className="relative border-l-4 border-gray-300 pl-4">
+            {timelineData.map((item, index) => (
+              <div key={index} className="mb-6 relative">
+                <div
+                  className={`absolute -left-[26px] w-12 h-12 rounded-full flex items-center justify-center ${item.color}`}
+                >
+                  <span className="font-bold">{item.year}</span>
+                </div>
+                <div className="ml-16 bg-white p-4 rounded-lg shadow-sm border">
+                  <h3 className="font-semibold text-sm">{item.title}</h3>
+                  <p className="text-xs text-gray-600">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="flex-1 overflow-y-auto">
+        {renderContent()}
+      </div>
+    </div>
+  );
+};
+
+export default ResearchTimelineApp;
+
+
